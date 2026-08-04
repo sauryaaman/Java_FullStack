@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CoreJava/Collection/Collection.iml" filepath="$PROJECT_DIR$/CoreJava/Collection/Collection.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CoreJava/Collection_Framework/Collection_Framework.iml" filepath="$PROJECT_DIR$/CoreJava/Collection_Framework/Collection_Framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Spark6.0.iml" filepath="$PROJECT_DIR$/.idea/Spark6.0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CoreJava/classAndObject/classAndObject.iml" filepath="$PROJECT_DIR$/CoreJava/classAndObject/classAndObject.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CoreJava/multiThreading/multiThreading.iml" filepath="$PROJECT_DIR$/CoreJava/multiThreading/multiThreading.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CoreJava/wrapper/wrapper.iml" filepath="$PROJECT_DIR$/CoreJava/wrapper/wrapper.iml" />
+    </modules>
+  </component>
+</project>
