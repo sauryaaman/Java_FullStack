@@ -1,9 +1,6 @@
 package org.example.config;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class DBConfig {
     static final String url = "jdbc:mysql://localhost:3306/spark6";
@@ -22,6 +19,22 @@ public class DBConfig {
             throw new RuntimeException(e);
         }
 
+    }
+
+    public static Connection getConnection()
+    {
+        Connection connection= null;
+        try
+        {
+            connection= DriverManager.getConnection(url,username,pass);
+
+
+
+        }
+        catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        return connection;
     }
 
 }
