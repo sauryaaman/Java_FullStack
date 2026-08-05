@@ -21,6 +21,7 @@ public class DBConfig {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+
     }
 
 }
