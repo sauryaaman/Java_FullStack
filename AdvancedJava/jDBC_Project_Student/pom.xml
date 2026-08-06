@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>org.example</groupId>
-  <artifactId>JDBCPractice</artifactId>
+  <artifactId>jDBC_Project_Student</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>JDBCResultset</name>
+  <name>jDBC_Project_Student</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -21,7 +21,6 @@
       <version>3.8.1</version>
       <scope>test</scope>
     </dependency>
-
 
     <!-- Source: https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
     <dependency>
