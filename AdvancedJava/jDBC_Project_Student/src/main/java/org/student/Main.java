@@ -1,5 +1,8 @@
 package org.student;
 
+
+
+import java.sql.ResultSet;
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
@@ -53,18 +56,86 @@ public class Main {
                 case 3:
                     System.out.println("enter the Student ID: ");
                      int newid= sc.nextInt();
-                     service.searchStudent(newid);
+                     Student s=service.searchStudent(newid);
+
+                     if(s!= null) {
+                         s.printStudentData();
+                     }
+
                      break;
+                case 4:
+                    System.out.println("Enter the Stduent id which you want to update");
+                    int update_id= sc.nextInt();
+                    Student update_student= service.searchStudent(update_id);
+                    update_student.printStudentData();
+                   try
+                   {
+                       if (update_student!= null){
+                           System.out.println("enter choice which you want to  update");
+                           System.out.println("1. Update Name");
+                           System.out.println("2. Update Email");
+                           System.out.println("3. Update Course");
+                           System.out.println("4. Update marks");
+                           int update_choice= sc.nextInt();
+                           sc.nextLine();
+                           switch (update_choice)
+                           {
+                               case 1:
+                                   System.out.println("enter the Name");
+                                   String update_name=sc.nextLine();
+                                   update_student.setName(update_name);
+                                   service.updateStudent(update_student);
+                                   break;
+                               case 2:
+                                   System.out.println("enter the Email");
+                                   String update_email=sc.nextLine();
+                                   update_student.setEmail(update_email);
+                                   service.updateStudent(update_student);
+                                   break;
+                               case 3:
+                                   System.out.println("enter the Course");
+                                   String update_Course=sc.nextLine();
+                                   update_student.setName(update_Course);
+                                   service.updateStudent(update_student);
+                                   break;
+                               case 4:
+                                   System.out.println("enter the marks");
+                                   String update_marks=sc.nextLine();
+                                   update_student.setName(update_marks);
+                                   service.updateStudent(update_student);
+                                   break;
+                               default:
+                                   System.out.println(" Invalid CHoice ! ,Please choose  the choice from the above Number, ");
+                                   break;
+
+
+
+
+                           }
+
+                       }else {
+                           System.out.println("Stduent Not Found which you want to update ");
+                       }
+                   } catch (Exception e) {
+                       throw new RuntimeException(e);
+                   }
+                   break;
+
+
+
+
                 case 5:
                     System.out.println("Enter  the Stduent id which you want to delete");
                     int dlt_id= sc.nextInt();
                     service.deleteStudent(dlt_id);
+                    break;
 
                 case 6:
                     System.out.println("Applicationn CLodes");
                     break;
                 default:
                     System.out.println("invalid choice");
+                    break;
 
             }
 

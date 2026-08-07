@@ -90,11 +90,12 @@ public class StudentServices {
 
     }
 
-    public void  searchStudent(int id)
+    public  Student  searchStudent(int id)
     {
         String sql= """
                 select * from Students where id =?
                 """;
+        Student searched_student = null;
 
         try
         {
@@ -106,14 +107,25 @@ public class StudentServices {
             ResultSet resultSet=preparedStatement.executeQuery();
            if(resultSet.next())
            {
-               System.out.println("student found");
-               System.out.println("ID: "+resultSet.getInt("id"));
+//               System.out.println("student found");
+//               System.out.println("ID: "+resultSet.getInt("id"));
+//
+//               System.out.println("name: "+resultSet.getString("name"));
+//               System.out.println("email: "+resultSet.getString("email"));
+//
+//               System.out.println("course: "+resultSet.getString("course"));
+//               System.out.println("marks: "+resultSet.getDouble("marks"));
 
-               System.out.println("name: "+resultSet.getString("name"));
-               System.out.println("email: "+resultSet.getString("email"));
+               searched_student= new Student(
 
-               System.out.println("course: "+resultSet.getString("course"));
-               System.out.println("marks: "+resultSet.getDouble("marks"));
+                       resultSet.getInt("id"),
+                       resultSet.getString("name"),
+                       resultSet.getString("email"),
+                       resultSet.getString("course"),
+                       resultSet.getDouble("marks")
+
+               );
+               
 
 
            }
@@ -122,9 +134,11 @@ public class StudentServices {
            }
 
 
+
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
+        return searched_student;
     }
 
     public void deleteStudent(int id)
@@ -149,6 +163,37 @@ public class StudentServices {
        } catch (SQLException e) {
            System.out.println("error"+e.getMessage());
        }
+    }
+
+    public void updateStudent(Student student)
+    {
+        String sql= """
+                update Students set name=? , email= ?,course= ?, marks=? where id=?
+                """;
+        Connection connection=DBConfig.getConnection();
+        try
+        {
+            PreparedStatement preparedStatement=connection.prepareStatement(sql);
+            preparedStatement.setString(1,student.getName());
+
+            preparedStatement.setString(2,student.getEmail());
+
+            preparedStatement.setString(3,student.getCourse());
+            preparedStatement.setDouble(4,student.getMarks());
+            preparedStatement.setInt(5,student.getId());
+            int rowAffeect=preparedStatement.executeUpdate();
+            if (rowAffeect >0) {
+                System.out.println("Student Updated Sucesssfully");
+
+            }
+            else {
+                System.out.println("Student not updated  there is some error brother fr se try kro");
+            }
+
+        } catch (SQLException e) {
+            System.out.println("error" + e.getMessage());
+        }
+
     }
 
 }

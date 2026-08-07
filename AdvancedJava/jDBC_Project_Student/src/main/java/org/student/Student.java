@@ -10,6 +10,17 @@ public class Student {
     public Student() {
 
     }
+    public void printStudentData(){
+        System.out.println("ID: "+ id);
+
+        System.out.println("Name: "+ name);
+
+        System.out.println("Email: "+ email);
+
+        System.out.println("Course: "+ course);
+
+        System.out.println("Marks: "+ marks);
+    }
 
     public Student(int id, String name, String email, String course, double marks) {
         this.id = id;
