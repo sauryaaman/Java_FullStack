@@ -67,10 +67,11 @@ public class Main {
                     System.out.println("Enter the Stduent id which you want to update");
                     int update_id= sc.nextInt();
                     Student update_student= service.searchStudent(update_id);
-                    update_student.printStudentData();
+
                    try
                    {
                        if (update_student!= null){
+                           update_student.printStudentData();
                            System.out.println("enter choice which you want to  update");
                            System.out.println("1. Update Name");
                            System.out.println("2. Update Email");
@@ -117,7 +118,7 @@ public class Main {
                            System.out.println("Stduent Not Found which you want to update ");
                        }
                    } catch (Exception e) {
-                       throw new RuntimeException(e);
+                       System.out.println("Error"+e.getMessage());
                    }
                    break;
 
