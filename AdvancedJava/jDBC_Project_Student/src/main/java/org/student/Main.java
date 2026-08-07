@@ -1,5 +1,6 @@
 package org.student;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Main {
@@ -54,6 +55,10 @@ public class Main {
                      int newid= sc.nextInt();
                      service.searchStudent(newid);
                      break;
+                case 5:
+                    System.out.println("Enter  the Stduent id which you want to delete");
+                    int dlt_id= sc.nextInt();
+                    service.deleteStudent(dlt_id);
 
                 case 6:
                     System.out.println("Applicationn CLodes");

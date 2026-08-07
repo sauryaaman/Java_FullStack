@@ -127,6 +127,30 @@ public class StudentServices {
         }
     }
 
+    public void deleteStudent(int id)
+    {
+        String sql= """
+                delete from Students where ( id )=(?)
+                """;
+        Connection connection=DBConfig.getConnection();
+       try
+       {
+           PreparedStatement preparedStatement= connection.prepareStatement(sql);
+           preparedStatement.setInt(1,id);
+           int rowAffect=preparedStatement.executeUpdate();
+           System.out.println(rowAffect);
+           if (rowAffect>0)
+           {
+               System.out.println("Stduent deleted Sucessfully");
+           }
+           else{
+               System.out.println("Student not found");
+           }
+       } catch (SQLException e) {
+           System.out.println("error"+e.getMessage());
+       }
+    }
+
 }
 
 
