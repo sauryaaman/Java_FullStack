@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+<!--    <bean id="engine" class="org.example.Engine"/>-->
+
+<!--    agr bytype mia ye id eng  hai to v run kr jayega  but byyName mia  jo field name hia class mia uhi  rhega-->
+
+<!--    <bean id="carByName" class="org.example.CarByName" autowire="byName" />-->
+
+<!--    <bean id="carByType" class="org.example.CarByType" autowire="byType"/>-->
+
+<!--    <bean id="carByConstructor" class="org.example.CarByConstructor" autowire="constructor"/>-->
+
+        <bean id="petrolEngine" class="org.example.PetrolEngine" autowire-candidate="false" />
+
+        <bean id="dieselEngine" class="org.example.DieselEngine" autowire-candidate="true"/>
+
+    <bean id="carByMultipleEngine" class="org.example.CarByMultipleEngine" autowire="byType"/>
+
+</beans>
+
