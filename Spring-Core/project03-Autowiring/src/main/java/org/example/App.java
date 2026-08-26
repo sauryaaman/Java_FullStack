@@ -22,9 +22,9 @@ public class App
 //        ByType Autowire;
 
 
-//          CarByType carByType= context.getBean("carByType",CarByType.class);
-//
-//          carByType.drive();
+          CarByType carByType= context.getBean("carByType",CarByType.class);
+
+          carByType.drive();
 
 
         // constructor se autowire
@@ -35,7 +35,7 @@ public class App
 
         //Ambuguuity error example for solving by  using the autowire-candiate attribute
 
-       CarByMultipleEngine carByMultipleEngine= context.getBean("carByMultipleEngine",CarByMultipleEngine.class);
-       carByMultipleEngine.drive();
+//       CarByMultipleEngine carByMultipleEngine= context.getBean("carByMultipleEngine",CarByMultipleEngine.class);
+//       carByMultipleEngine.drive();
     }
 }
