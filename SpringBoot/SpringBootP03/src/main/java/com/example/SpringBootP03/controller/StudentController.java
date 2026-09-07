@@ -33,4 +33,6 @@ public class StudentController {
      {
          return "procust cataogry is " + cat+" and the minium price is" + minPrice;
      }
+
+
 }
