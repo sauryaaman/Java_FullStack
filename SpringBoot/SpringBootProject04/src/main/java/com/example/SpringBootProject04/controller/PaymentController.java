@@ -2,6 +2,7 @@ package com.example.SpringBootProject04.controller;
 
 import com.example.SpringBootProject04.service.PaymentService;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -10,6 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/payment")
 public class PaymentController {
     private final PaymentService paymentService;
+
+    @Value("${app.institute.name}")
+    private String instituteName;
 
 
     //ambiguityy prpblem paymenre serive has two  beans which one is get   this is one of the problem soluton by
@@ -27,6 +31,7 @@ public class PaymentController {
     @GetMapping("/pay")
     public String pay()
     {
+        System.out.println(instituteName);
     return paymentService.pay();
     }
 }
