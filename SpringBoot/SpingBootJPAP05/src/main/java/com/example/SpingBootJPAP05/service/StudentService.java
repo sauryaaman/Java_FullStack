@@ -23,7 +23,24 @@ public class StudentService {
     public List<Student> getAllStudentData()
 {
 
-    return (List<Student>) repository.findAll();
+    return repository.findAll();
 }
 
+   public Student saveStudent(Student student)
+   {
+       return repository.save(student);
+   }
+
+   public Student getStudentById( Long id)
+   {
+       return repository.findById(id)
+               .orElseThrow(()-> new RuntimeException("student not found"));
+   }
+
+
+   public void deleteStudent(Long id)
+   {
+        repository.deleteById(id);
+
+   }
 }
