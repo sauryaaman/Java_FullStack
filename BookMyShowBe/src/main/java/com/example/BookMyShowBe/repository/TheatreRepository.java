@@ -1,6 +1,17 @@
 package com.example.BookMyShowBe.repository;
 
+
+
+import com.example.BookMyShowBe.entity.Theatre;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface BookingRepository extends JpaRepository {
+import java.util.List;
+import java.util.Optional;
+
+public interface TheatreRepository extends JpaRepository <Theatre ,Long> {
+
+
+    List<Theatre> findByCityIgnoreCaseOrderByName(String city);
+
+    Optional<Theatre> findByNameAndCity(String name, String city);
 }

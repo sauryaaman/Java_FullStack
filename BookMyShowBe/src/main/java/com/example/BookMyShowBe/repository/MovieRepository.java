@@ -1,6 +1,13 @@
 package com.example.BookMyShowBe.repository;
 
+import com.example.BookMyShowBe.entity.Movie;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface BookingRepository extends JpaRepository {
+import java.util.List;
+import java.util.Optional;
+
+public interface MovieRepository extends JpaRepository<Movie,Long> {
+
+    List<Movie> findByActiveTrueOrderByTitle();
+    Optional<Movie> findByTitle(String title);
 }

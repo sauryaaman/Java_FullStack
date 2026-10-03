@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="efa5f9ec-f7c4-4ce1-b55c-916c1fd0959f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../SpringBoot/SpringBootProject06/src/main/java/com/example/SpringBootProject06/entity/Course.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../SpringBoot/SpringBootProject06/src/main/java/com/example/SpringBootProject06/entity/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/Spark6.0.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../CoreJava/Collection_Framework/src/List/ListDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/../CoreJava/Collection_Framework/src/List/ListDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBoot/.idea/SpringBoot.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBoot/SpringBootProject04/src/main/java/com/example/SpringBootProject04/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringBoot/SpringBootProject04/src/main/java/com/example/SpringBootProject04/controller/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBoot/SpringBootProject1/src/main/java/com/example/SpringBootProject1/config/ConnectionConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringBoot/SpringBootProject1/src/main/java/com/example/SpringBootProject1/config/ConnectionConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SpringBoot/SpringBootProject1/src/main/java/com/example/SpringBootProject1/controller/StudentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../SpringBoot/SpringBootProject1/src/main/java/com/example/SpringBootProject1/controller/StudentController.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="3JNJMQVECZYE0LJcyogvEIsYcSQ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="efa5f9ec-f7c4-4ce1-b55c-916c1fd0959f" name="Changes" comment="" />
+      <created>1789495545076</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1789495545076</updated>
+    </task>
+    <servers />
+  </component>
+</project>

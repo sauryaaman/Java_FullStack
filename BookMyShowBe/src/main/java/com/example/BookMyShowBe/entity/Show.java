@@ -1,4 +1,4 @@
-package entity;
+package com.example.BookMyShowBe.entity;
 
 import jakarta.persistence.*;
 
@@ -24,6 +24,7 @@ public class Show {
 
     private LocalDateTime endsAt;
 
+    @Column(name = "ticket_price")
     private BigDecimal ticketprice;
 
     private int totalSeats;
@@ -36,6 +37,10 @@ public class Show {
 
     @Version  //locking
     private long version;
+    public  Show()
+    {
+
+    }
 
     public Show(Movie movie, Theatre theatre, LocalDateTime startsAt, LocalDateTime endsAt, BigDecimal ticketprice,int totalSeats) {
         this.movie = movie;

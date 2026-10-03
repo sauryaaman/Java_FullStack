@@ -1,10 +1,10 @@
-package entity;
+package com.example.BookMyShowBe.entity;
 
 
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "show_seat",uniqueConstraints = @UniqueConstraint(name = "uk_show_seat",columnNames = {"show_id","seatLabel"}))
+@Table(name = "show_seats",uniqueConstraints = @UniqueConstraint(name = "uk_show_seat",columnNames = {"show_id","seatLabel"}))
 public class ShowSeat {
 
     @Id

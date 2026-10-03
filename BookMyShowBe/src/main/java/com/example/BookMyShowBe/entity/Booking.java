@@ -1,4 +1,4 @@
-package entity;
+package com.example.BookMyShowBe.entity;
 
 
 import jakarta.persistence.*;
@@ -144,5 +144,9 @@ public class Booking {
 
     public void setSeatlabels(List<String> seatlabels) {
         this.seatlabels = seatlabels;
+    }
+
+    public void cancel() {
+        status=BookingStatus.CANCELLED;
     }
 }
